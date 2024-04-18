@@ -64,7 +64,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="C:\Users\serpe\Downloads\1.png" alt="Logo" class="img-fluid">
+                    <img src="{{ '1.png' }}" alt="Logo" class="img-fluid">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
