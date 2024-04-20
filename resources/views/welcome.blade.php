@@ -78,6 +78,9 @@
                             <a class="nav-link" href="#">Home</a>
                         </li>
                         <li class="nav-item me-3">
+                            <a class="nav-link" href="#">Dicas</a>
+                        </li>
+                        <li class="nav-item me-3">
                             <a class="nav-link" href="#">Sobre</a>
                         </li>
                         <li class="nav-item me-3">
