@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Código na Web 1/title>
+        <title>Código na Web</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>
             /* Remove a altura fixa da navbar */
@@ -92,7 +92,7 @@
         </nav>
 
         <div class="container mt-5">
-            <h1>Conteúdo da Página</h1>
+            <h1>Conteúdo da Página 1</h1>
             <p>Este é um exemplo de conteúdo da página.</p>
         </div>
 
