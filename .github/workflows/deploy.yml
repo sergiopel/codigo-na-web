@@ -12,7 +12,10 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-      
+
+      - name: Debug Secrets
+        run: echo "REMOTE_HOST is ${{ secrets.REMOTE_HOST }}"
+        
       - name: Deploy to Remote Server
         uses: appleboy/ssh-action@master
         with:
