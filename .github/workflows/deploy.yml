@@ -13,8 +13,14 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Debug Secrets
+      - name: Debug Secrets HOST
         run: echo "REMOTE_HOST is ${{ secrets.REMOTE_HOST }}"
+
+      - name: Debug Secrets USER 
+        run: echo "REMOTE_USER is ${{ secrets.REMOTE_USER }}"
+        
+      - name: Debug Secrets PRIVATE_KEY  
+        run: echo "SSH_PRIVATE_KEY is ${{ secrets.SSH_PRIVATE_KEY }}"
         
       - name: Deploy to Remote Server
         uses: appleboy/ssh-action@master
