@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout do repositorio
-        uses: actions/checkout@1
+        uses: actions/checkout@v1
       - name: Deploy para meu hostgator
         uses: easingthemes/ssh-deploy@master
         env:
