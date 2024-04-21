@@ -17,4 +17,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            rsync -avz --delete ./ seu_usuario@seu_ip:/caminho/para/repositório
+            rsync -avz --delete ./ apr45851@codigonaweb:/codigonaweb.com
