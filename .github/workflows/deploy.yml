@@ -6,29 +6,19 @@ on:
       - master # altere para o ramo que deseja monitorar para atualizações
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Debug Secrets HOST
-        run: echo "REMOTE_HOST is ${{ secrets.REMOTE_HOST }}"
-
-      - name: Debug Secrets USER 
-        run: echo "REMOTE_USER is ${{ secrets.REMOTE_USER }}"
-        
-      - name: Debug Secrets PRIVATE_KEY  
-        run: echo "SSH_PRIVATE_KEY is ${{ secrets.SSH_PRIVATE_KEY }}"
-        
-      - name: Deploy to Remote Server
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.REMOTE_HOST }} # Host da HostGator
-          username: ${{ secrets.REMOTE_USER }} # Nome de usuário SSH
-          key: ${{ secrets.SSH_PRIVATE_KEY }} # Chave privada SSH para acesso seguro
-          script: |
-            cd codigonaweb.com # Caminho do repositório no servidor remoto
-            git pull # Puxa as últimas alterações do GitHub
-
+      - name: Checkout do repositorio
+        uses: actions/checkout@1
+      - name: Deploy para meu hostgator
+        uses: easingthemes/ssh-deploy@master
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "src/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
