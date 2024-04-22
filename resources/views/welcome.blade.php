@@ -161,7 +161,7 @@
                 <p>Em breve, postarei meu portfólio e dicas de TI</p>
             </div>
             <div class="col-sm-4">
-                <img src="tecnologias2.gif" alt="Descrição da Imagem" class="img-fluid">
+                <img src="tecnologias3.gif" alt="Descrição da Imagem" class="img-fluid">
             </div>
         </div>
     </div>
