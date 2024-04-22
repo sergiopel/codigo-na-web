@@ -35,6 +35,11 @@
                 flex-shrink: 1;
             }
 
+            /* Estilo dos links na navbar para torná-los brancos */
+            .nav-link {
+                color: white !important;  /* Uso do !important para garantir prioridade */; /* Tornar a cor do texto branca */
+            }
+
             .nav-item {
                 margin-left: .5rem;
                 /* Reduzir margem para dispositivos móveis */
@@ -65,10 +70,50 @@
                 text-align: center;
                 padding: 1rem; /* Espaçamento no rodapé */
             }
+
+            .background-image {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -2;  /*Mantém a imagem de fundo atrás dos outros elementos */
+                background-image: url('{{ 'professional-programmer-working-compress.jpg' }}');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            /* Camada de sobreposição */
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7); /* Cor preta com opacidade para criar camada escura */
+                z-index: -1; /* Mantém a sobreposição atrás dos elementos */
+            }
+
+            /* Estilo do conteúdo */
+            .content {
+                position: relative; /* Permite posicionamento em relação à sobreposição */
+                z-index: 0; /* Garante que o conteúdo esteja acima da sobreposição */
+                color: white;
+            }
+
+
         </style>
     </head>
 
     <body>
+        <!-- Imagem de fundo -->
+        <div class="background-image"></div>
+
+        <!-- Camada de sobreposição -->
+        <div class="overlay"></div>
+
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -99,9 +144,9 @@
             </div>
         </nav>
 
-        <div class="container mt-5">
-            <h1>Conteúdo da Página 13</h1>
-            <p>Este é um exemplo de conteúdo da página.</p>
+        <div class="content container mt-5">
+            <h1>Esse site está sendo contruído com PHP e Laravel</h1>
+            <p></p>
 
         </div>
 
