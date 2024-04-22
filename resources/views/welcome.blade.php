@@ -57,6 +57,14 @@
                     /* Ajustar margem para telas menores */
                 }
             }
+
+            /* Estilo do rodapé para corresponder ao da navbar */
+            .footer {
+                background-color: #343a40; /* Cor igual ao 'bg-dark' */
+                color: white;
+                text-align: center;
+                padding: 1rem; /* Espaçamento no rodapé */
+            }
         </style>
     </head>
 
@@ -92,9 +100,14 @@
         </nav>
 
         <div class="container mt-5">
-            <h1>Conteúdo da Página 12</h1>
+            <h1>Conteúdo da Página 13</h1>
             <p>Este é um exemplo de conteúdo da página.</p>
+
         </div>
+
+        <footer class="footer fixed-bottom">
+            <p>© 2024 Código na Web. Todos os direitos reservados.</p>
+        </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     </body>
